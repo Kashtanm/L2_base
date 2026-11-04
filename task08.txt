@@ -1,0 +1,10 @@
+Kata: https://www.codewars.com/kata/5842df8ccbd22792a4000245
+
+function expandedForm(num) {
+  return num
+    .toString()
+    .split('')
+    .map((digit, i, arr) => digit === '0' ? 0 : digit * 10 ** (arr.length - i - 1))
+    .filter(num => num !== 0)
+    .join(' + ');
+}
