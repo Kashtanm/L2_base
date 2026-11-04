@@ -1,0 +1,8 @@
+Kata: https://www.codewars.com/kata/5594c4599934000e1e00002e
+
+function longest(arr, n) {
+  const sorted = arr
+    .map((str, index) => ({ str, index }))
+    .sort((a, b) => b.str.length - a.str.length || a.index - b.index);
+  return sorted[n - 1].str;
+}
